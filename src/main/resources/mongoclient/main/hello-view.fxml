@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
+<VBox spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="mongoclient.main.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Label fx:id="greeting_text" text="Welcome to MongoClient. Pls configure a connection to a MongoDB host"/>
+
+    <VBox>
+        <Label text="Host"></Label>
+        <TextField fx:id="remote_host" maxWidth="150"/>
+    </VBox>
+    <VBox>
+        <Label text="port"/>
+        <TextField fx:id="port" maxWidth="150"/>
+    </VBox>
+
+    <Button fx:id="connect" text="connect" onAction="#handleButtonPress"/>
+    <Label fx:id="info_text"/>
+    <ListView fx:id="databases" />
+</VBox>
