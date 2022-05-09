@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ae94b07-73dd-4f3e-b361-6c4fecd2d29c" name="Changes" comment="" />
+    <list default="true" id="2ae94b07-73dd-4f3e-b361-6c4fecd2d29c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mongoclient/main/DatabaseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mongoclient/main/MongoConnectionGate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mongoclient/main/collection-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mongoclient/main/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mongoclient/main/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mongoclient/main/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mongoclient/main/HelloController.java" afterDir="false" />
+    </list>
+    <list id="7cac1563-d3fd-409a-bfcd-1d7ccc60a483" name="Changes by logston" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/mongoclient/main/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mongoclient/main/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mongoclient/main/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mongoclient/main/hello-view.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,10 +29,29 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/mongoclient/main/HelloController.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="4" changelist="2ae94b07-73dd-4f3e-b361-6c4fecd2d29c" />
+        <range start1="5" end1="5" start2="7" end2="8" changelist="2ae94b07-73dd-4f3e-b361-6c4fecd2d29c" />
+        <range start1="10" end1="10" start2="13" end2="14" changelist="7cac1563-d3fd-409a-bfcd-1d7ccc60a483" />
+        <range start1="11" end1="11" start2="15" end2="16" changelist="2ae94b07-73dd-4f3e-b361-6c4fecd2d29c" />
+        <range start1="14" end1="16" start2="19" end2="19" changelist="2ae94b07-73dd-4f3e-b361-6c4fecd2d29c" />
+        <range start1="18" end1="19" start2="21" end2="22" changelist="2ae94b07-73dd-4f3e-b361-6c4fecd2d29c" />
+        <range start1="27" end1="28" start2="30" end2="38" changelist="2ae94b07-73dd-4f3e-b361-6c4fecd2d29c" />
+        <range start1="43" end1="44" start2="53" end2="61" changelist="2ae94b07-73dd-4f3e-b361-6c4fecd2d29c" />
+        <range start1="48" end1="48" start2="65" end2="78" changelist="7cac1563-d3fd-409a-bfcd-1d7ccc60a483" />
+      </ranges>
+    </file>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="28n6BxznVLOwbZdDGXQmaHrqYMm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -29,10 +60,16 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "last_opened_file_path": "C:/Users/Luckb/IdeaProjects/MongoClient/src/main/resources/mongoclient/main",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Luckb\IdeaProjects\MongoClient\src\main\resources\mongoclient\main" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\paw\IdeaProjects\MongoClient\src\main\resources\mongoclient\main" />
       <recent name="C:\Users\paw\IdeaProjects\MongoClient\src\main\java\mongoclient\main" />
@@ -83,5 +120,16 @@
       <updated>1651839876025</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
