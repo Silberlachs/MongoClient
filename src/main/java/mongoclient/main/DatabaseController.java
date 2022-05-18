@@ -1,18 +1,24 @@
 package mongoclient.main;
 
+import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.MongoIterable;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import org.bson.Document;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.ResourceBundle;
+import java.util.Set;
 
 public class DatabaseController implements Initializable {
 
@@ -26,8 +32,10 @@ public class DatabaseController implements Initializable {
     @FXML
     private ListView collection_list;
 
-    public void initialize() {}
+    @FXML
+    private TableView collection_items;
 
+    public void initialize() {}
 
 
     public void userDataHack()
@@ -39,7 +47,6 @@ public class DatabaseController implements Initializable {
         database = MongoConnectionGate.getInstance().getDatabase(databaseName);
 
         for (String name  : database.listCollectionNames()) {
-            System.out.println(name);
             collection_list.getItems().add(name);
         }
 
@@ -52,10 +59,50 @@ public class DatabaseController implements Initializable {
        String targetCollection = collection_list.getSelectionModel().getSelectedItem().toString();
        MongoCollection<Document> collection = database.getCollection(targetCollection);
 
-       collection_list.getItems().removeAll();
+       ArrayList<String> unifiedKeyCollection = new ArrayList<String>();
+
+       //extract table column names from data model in database
+       for(Document entries : collection.find()){
+           Set keySet = entries.keySet();
+
+           for (Object key : keySet)
+           {
+
+               if(!unifiedKeyCollection.contains(key.toString())){
+                   unifiedKeyCollection.add(key.toString());
+               }
+           }
+       }
+
+        for(String keyNameInTable : unifiedKeyCollection)
+        {
+            collection_items.getColumns().addAll(new TableColumn(keyNameInTable));
+        }
+
+
+/*
+        TableColumn producer = new TableColumn("Hersteller");
+        producer.getColumns().addAll(
+                new TableColumn("Name"),
+                new TableColumn("Preis")
+        );
+
+        collection_items.getColumns().addAll(
+                new TableColumn("Name"),
+                new TableColumn("Kategorie"),
+                new TableColumn("Preis"),
+                producer,
+                new TableColumn("Tags")
+        );
+*/
 
        for (Document element: collection.find()){
-           collection_list.getItems().add(element.toString());
+
+            for (Object valueString : element.values()){
+
+                collection_items.getItems().addAll(new TableColumn(valueString.toString()));
+            }
+
        }
 
     }

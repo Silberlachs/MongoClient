@@ -6,12 +6,14 @@
 
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
 <VBox spacing="20.0" xmlns:fx="http://javafx.com/fxml" fx:controller="mongoclient.main.DatabaseController" onMouseEntered="#userDataHack">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
 
     <Label fx:id="db_text" text="Database Page"/>
-    <ListView fx:id="collection_list" />
+    <ListView fx:id="collection_list" maxHeight="250"/>
     <Button fx:id="load_items" text="load collection items" onAction="#loadEntries"/>
+    <TableView fx:id="collection_items"/>
 </VBox>

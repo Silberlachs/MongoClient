@@ -60,7 +60,6 @@ public class HelloController {
             }
         }
 
-        System.out.println("this is a triumph, I'm making a note here, huge successs!");
     }
 
 }
