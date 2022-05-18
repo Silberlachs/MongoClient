@@ -28,4 +28,5 @@
     <Button fx:id="connect" text="connect" onAction="#handleButtonPress"/>
     <Label fx:id="info_text"/>
     <ListView fx:id="databases" />
+    <Button fx:id="load" text="load database" onAction="#handleSceneSwitch" />
 </VBox>

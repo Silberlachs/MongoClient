@@ -1,22 +1,16 @@
 package mongoclient.main;
 
-import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.MongoIterable;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import org.bson.Document;
-
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.ResourceBundle;
 import java.util.Set;
 
@@ -34,6 +28,9 @@ public class DatabaseController implements Initializable {
 
     @FXML
     private TableView collection_items;
+
+    @FXML
+    private Button load_items, back;
 
     public void initialize() {}
 
@@ -55,6 +52,8 @@ public class DatabaseController implements Initializable {
 
     public void loadEntries(ActionEvent event){
 
+        if(collection_list.getSelectionModel().getSelectedItem() == null)
+            return;
 
        String targetCollection = collection_list.getSelectionModel().getSelectedItem().toString();
        MongoCollection<Document> collection = database.getCollection(targetCollection);
@@ -79,7 +78,6 @@ public class DatabaseController implements Initializable {
             collection_items.getColumns().addAll(new TableColumn(keyNameInTable));
         }
 
-
 /*
         TableColumn producer = new TableColumn("Hersteller");
         producer.getColumns().addAll(
@@ -102,13 +100,14 @@ public class DatabaseController implements Initializable {
 
                 collection_items.getItems().addAll(new TableColumn(valueString.toString()));
             }
-
        }
+    }
 
+    public void mainMenu(ActionEvent event) throws IOException {
+
+        HelloApplication.getInstance().changeScene("hello-view.fxml", "");
     }
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-    }
+    public void initialize(URL url, ResourceBundle resourceBundle) {}
 }

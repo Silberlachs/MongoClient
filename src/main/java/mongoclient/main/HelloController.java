@@ -1,19 +1,14 @@
 package mongoclient.main;
 
-import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.MongoIterable;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import mongoDb.MongoConnection;
 
 import java.io.IOException;
-import java.util.Objects;
 
 public class HelloController {
 
@@ -24,10 +19,10 @@ public class HelloController {
     private TextField remote_host,port;
 
     @FXML
-    private Button connect;
+    private Button connect,load;
 
     @FXML
-    private ListView databases_list;
+    private ListView databases;
 
     public void initialize() {
 
@@ -54,12 +49,23 @@ public class HelloController {
 
             MongoIterable<String> mongoDatabases = MongoConnectionGate.getInstance().listDatabaseNames();
 
+            databases.getItems().removeAll();
+
             for(String output: mongoDatabases)
             {
-                databases_list.getItems().add(output);
+                databases.getItems().add(output);
             }
+            databases.getSelectionModel().select(0);
         }
-
     }
 
+    public void handleSceneSwitch(ActionEvent event) throws IOException {
+
+        if(databases.getSelectionModel().getSelectedItem() == null){
+            return;
+        }
+        HelloApplication.getInstance().changeScene(
+                "collection-view.fxml", databases.getSelectionModel().getSelectedItem().toString()
+        );
+    }
 }

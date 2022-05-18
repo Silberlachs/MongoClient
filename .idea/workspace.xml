@@ -7,13 +7,12 @@
     <list default="true" id="2ae94b07-73dd-4f3e-b361-6c4fecd2d29c" name="Changes" comment="Baut 2 Views und fügt Elemente aus InstrumentCollection hinzu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mongoclient/main/DatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mongoclient/main/DatabaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mongoclient/main/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mongoclient/main/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mongoclient/main/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mongoclient/main/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mongoclient/main/collection-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mongoclient/main/collection-view.fxml" afterDir="false" />
-    </list>
-    <list id="7cac1563-d3fd-409a-bfcd-1d7ccc60a483" name="Changes by logston" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/mongoclient/main/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mongoclient/main/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mongoclient/main/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mongoclient/main/hello-view.fxml" afterDir="false" />
     </list>
+    <list id="7cac1563-d3fd-409a-bfcd-1d7ccc60a483" name="Changes by logston" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,18 +27,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/mongoclient/main/HelloController.java">
-      <ranges>
-        <range start1="4" end1="5" start2="4" end2="4" changelist="7cac1563-d3fd-409a-bfcd-1d7ccc60a483" />
-        <range start1="7" end1="8" start2="6" end2="6" changelist="7cac1563-d3fd-409a-bfcd-1d7ccc60a483" />
-        <range start1="12" end1="13" start2="10" end2="10" changelist="7cac1563-d3fd-409a-bfcd-1d7ccc60a483" />
-        <range start1="15" end1="16" start2="12" end2="12" changelist="7cac1563-d3fd-409a-bfcd-1d7ccc60a483" />
-        <range start1="62" end1="63" start2="58" end2="58" changelist="2ae94b07-73dd-4f3e-b361-6c4fecd2d29c" />
-        <range start1="64" end1="64" start2="59" end2="72" changelist="7cac1563-d3fd-409a-bfcd-1d7ccc60a483" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
